@@ -42,5 +42,5 @@ module "my_modules5" {
     source = "./cdn_module"
     my_region = "eu-west-1"
     domain_name = module.my_modules4.domain_name
-    bucket_id = module.s3_module.bucket_id
+    bucket_id = module.my_modules4.bucket_id
 }
