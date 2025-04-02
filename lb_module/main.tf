@@ -1,4 +1,4 @@
-resource "aws_security_group" "lb_sg" {
+resource "aws_security_group" "alb_sg" {
     name = "alb_security_group"
     vpc_id = var.vpc_id_reference
     description = "alb sg having rules on port 80 and all traffic"
@@ -56,7 +56,7 @@ resource "aws_lb_target_group" "devops_target_group" {
 }
 
 resource "aws_lb_listener" "devops_listener" {
-    load_balancer_arn = aws_lb.devops_alb.arn
+    load_balancer_arn = aws_lb.devops_lb.arn
     port = "80"
     protocol = "HTTP"
 
