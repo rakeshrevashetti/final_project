@@ -1,0 +1,8 @@
+my_region = "eu-west-1"
+base_ami_id = "ami-08f9a9c699d2ab3f9"
+instance_type_for_custom_ami = "t2.small"
+instance_type_for_lt = "t2.small"   
+my_key = "rakeshrr"
+desired = "1"
+maximum = "1"
+minimum = "1"
