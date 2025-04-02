@@ -21,7 +21,7 @@ resource "aws_security_group" "alb_sg" {
 }
 
 resource "aws_lb" "devops_lb" {
-    vpc_id = var.vpc_id_reference
+
     load_balancer_type = "application"
     name = "${terraform.workspace}-alb"
     internal = false
