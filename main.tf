@@ -13,8 +13,8 @@ module "my_modules1" {
 module "my_modules2" {
     source = "./lb_module"
     my_region = "eu-west-1"
-    vpc_id_reference = module.vpc_module.vpc_id_reference
-    public_subnet_ID = module.vpc_module.public_subnet_ID
+    vpc_id_reference = module.my_modules1.vpc_id_reference
+    public_subnet_ID = module.my_modules1.public_subnet_ID
 }
 
 module "my_modules3" {
@@ -27,10 +27,10 @@ module "my_modules3" {
     desired = "1"
     maximum = "1"
     minimum = "1"
-    vpc_id_reference = module.vpc_module.vpc_id_reference
-    public_subnet_ID = module.vpc_module.public_subnet_ID
-    private_subnet_ID = module.vpc_module.private_subnet_ID
-    aws_lb_target_group_arn = module.lb_module.aws_lb_target_group_arn
+    vpc_id_reference = module.my_modules1.vpc_id_reference
+    public_subnet_ID = module.my_modules1.public_subnet_ID
+    private_subnet_ID = module.my_modules1.private_subnet_ID
+    aws_lb_target_group_arn = module.my_modules2.aws_lb_target_group_arn
 }
 
 module "my_modules4" {
