@@ -2,7 +2,9 @@ variable "my_region" {}
 
 variable "vpc_id_reference" {}
 
-variable "public_subnet_ID" {}
+variable "public_subnet_ID" {
+    type = list(string)
+}
 
 variable "private_subnet_ID" {}
 
