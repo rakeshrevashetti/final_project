@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my_s3_bucket" {
-  bucket = "${terraform.workspace}-s3-bucket"
+  bucket = "${terraform.workspace}-s3-bucket38473283"
   tags = {
     Name        = "${terraform.workspace}-s3-bucket"
     Environment = "Dev"
