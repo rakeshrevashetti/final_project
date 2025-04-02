@@ -28,7 +28,7 @@ resource "aws_security_group" "launch_template_sg" {
 resource "aws_instance" "custom_ami_instance" {
   ami           = var.base_ami_id  
   instance_type = var.instance_type_for_custom_ami
-  subnet_id     = var.public_subnet_ID
+  subnet_id     = var.public_subnet_ID[0]
   vpc_security_group_ids = [aws_security_group.launch_template_sg.id]
   key_name = "rakeshrr"
 

@@ -35,7 +35,7 @@ module "my_modules3" {
 
 module "my_modules4" {
     source = "./s3_module"
-    my_region = "eu-west"
+    my_region = "eu-west-1"
 }
 
 module "my_modules5" {
