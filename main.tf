@@ -1,4 +1,4 @@
-module "my_modules" {
+module "my_modules1" {
     source = "./vpc_module"
     my_region = "eu-west-1"
     vpc_cidr = "10.0.0.0/24"
@@ -10,14 +10,14 @@ module "my_modules" {
     my_az_region2 = "eu-west-1b"
 }
 
-module "my_modules" {
+module "my_modules2" {
     source = "./lb_module"
     my_region = "eu-west-1"
     vpc_id_reference = module.vpc_module.vpc_id_reference
     public_subnet_ID = module.vpc_module.public_subnet_ID
 }
 
-module "my_modules" {
+module "my_modules3" {
     source = "./asg_module"
     my_region = "eu-west-1"
     base_ami_id = "ami-08f9a9c699d2ab3f9"
@@ -33,12 +33,12 @@ module "my_modules" {
     aws_lb_target_group_arn = module.lb_module.aws_lb_target_group_arn
 }
 
-module "my_modules" {
+module "my_modules4" {
     source = "./s3_module"
     my_region = "eu-west"
 }
 
-module "my_modules" {
+module "my_modules5" {
     source = "./cdn_module"
     my_region = "eu-west-1"
     domain_name = module.s3_module.bucket_regional_domain_name
