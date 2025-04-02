@@ -38,7 +38,7 @@ resource "aws_lb_target_group" "devops_target_group" {
     name = "${terraform.workspace}-lb-tg"
     port = 80
     protocol = "HTTP"
-    target_type = "Instances"
+    target_type = "instance"
     vpc_id = var.vpc_id_reference
     health_check {
         path = "/"
