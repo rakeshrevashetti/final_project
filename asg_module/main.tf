@@ -40,7 +40,7 @@ resource "aws_instance" "custom_ami_instance" {
     connection {
     type        = "ssh"
     user        = "ec2-user"  
-    private_key = file("./rakeshrr")  
+    private_key = file("./rakeshrr")        
     host        = self.public_ip
   }
 
